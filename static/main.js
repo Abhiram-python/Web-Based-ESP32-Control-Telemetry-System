@@ -27,8 +27,8 @@ async function remotetest(o,jx,jy,m1,m2){
             o:o,
             jx:jx,
             jy:jy,
-            m1:m1,
-            m2:m2
+            t:m1,
+            b:m2
         })
 
     })
