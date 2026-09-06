@@ -55,15 +55,5 @@ def val():
         "ok":"ok"
     })
 
-
-@app.route("/led/on")
-def led_on():
-    if connected_client:
-        connected_client.send("LED_ON")
-        return "Command sent"
-
-    return "ESP32 not connected", 503
-
-
 if __name__ == "__main__":
     app.run(debug=True)
