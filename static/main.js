@@ -8,6 +8,10 @@ var fjoy=document.getElementById("fjoy")
 var m1=document.getElementById("m1")
 var m2=document.getElementById("m2")
 
+ojoy.style.top = `${200}px`
+m1.style.top = `${100}px`
+m2.style.top = `${100}px`
+
 
 let ojoy_pointerId = null;
 let fjoy_pointerId = null;
