@@ -65,6 +65,7 @@ body{
     top:100%;
     transform:translate(-50%,-50%);
     box-shadow: 0 0 2px 2px grey;
+    touch-action: none;
     /* transform:translate(-50%,-50%) */
 }
 
