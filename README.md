@@ -18,7 +18,7 @@ esp32drone/esp32drone.ino  ESP32 Wi-Fi and motor-control firmware
 1. Open the controller page in a browser.
 2. The browser sends control values as JSON with `POST /value`.
 3. Flask forwards each value to the connected ESP32 through `/ws`.
-4. The ESP32 converts the throttle and top motor values to PWM output.
+4. The ESP32 converts the throttle and motor values to PWM output.
 
 The browser currently sends this payload:
 
