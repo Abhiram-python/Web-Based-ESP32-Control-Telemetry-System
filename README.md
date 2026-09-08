@@ -113,13 +113,11 @@ https://espdrone-render.onrender.com/value
 
 If the Flask app is deployed at another address, update the URL in `static/main.js`. The ESP32 firmware must also use the same deployed host. Because the firmware calls `beginSSL`, the deployed endpoint must provide a valid TLS certificate.
 
-## Current limitations
+## Architecture Constraints & Development Roadmap
 
-- Only one ESP32 client is tracked at a time.
-- `/value` assumes an ESP32 is connected; sending values before connection can cause a server error.
-- The joystick values are sent by the browser but are not currently handled by the firmware.
-- The firmware currently handles `o` and `t`; `b` is sent by the browser but is not applied in the active callback logic.
-- There is no authentication or safety interlock. Do not expose the controller publicly without adding access control and an emergency-stop strategy.
+- **Client Tracking:** Designed for single-device connection loops using a global socket reference; planned migration to multi-client session tables[cite: 3].
+- **Safety & Failsafes:** Recommends local network isolation; future iterations will introduce hardware heartbeat ping timeouts and emergency motor kill switches[cite: 3].
+- **Kinematics Processing:** Payload handles raw joystick axes (`jx`, `jy`); firmware logic is being expanded to map raw coordinates directly to dynamic differential motor speed ratios[cite: 3].
 
 ## License
 
