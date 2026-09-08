@@ -115,9 +115,8 @@ If the Flask app is deployed at another address, update the URL in `static/main.
 
 ## Architecture Constraints & Development Roadmap
 
-- **Client Tracking:** Designed for single-device connection loops using a global socket reference; planned migration to multi-client session tables[cite: 3].
-- **Safety & Failsafes:** Recommends local network isolation; future iterations will introduce hardware heartbeat ping timeouts and emergency motor kill switches[cite: 3].
-- **Kinematics Processing:** Payload handles raw joystick axes (`jx`, `jy`); firmware logic is being expanded to map raw coordinates directly to dynamic differential motor speed ratios[cite: 3].
+- **Client Tracking:** the current backend is designed for only single connected device ,planned migration to multi-client.
+- **Safety & Failsafes:** future iterations will introduce hardware heartbeat ping timeouts and emergency motor kill switches.
 
 ## License
 
