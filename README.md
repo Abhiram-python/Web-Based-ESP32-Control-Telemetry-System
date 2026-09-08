@@ -34,6 +34,12 @@ The browser currently sends this payload:
 
 The relay sends values as separate messages in the form `keyvalue`, for example `o150` or `t40`.
 
+## Key Engineering Concepts
+- **Asynchronous IPC & Relay Protocol:** Bridges browser HTTP POST payloads to persistent WebSocket frames for low-latency hardware control.
+- **Full-Stack Signal Flow:** Transmits touch/pointer UI inputs through Python/Flask endpoint handlers down to ESP32 GPIO PWM output pins.
+- **Concurrency & State Management:** Evaluates process-global WebSocket client handles and single-worker server constraints (`Gevent` event loop).
+- **Embedded Hardware Integration:** Converts serialized string commands into dynamic motor duty cycles via ESP32 timers and hardware actuators.
+
 ## Requirements
 
 - Python 3.9 or newer
